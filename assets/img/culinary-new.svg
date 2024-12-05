@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve">
+  <g transform="matrix(1 0 0 1 540 540)" id="e424a054-1202-4424-9dbb-82e3dc348527">
+    <rect style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1; visibility: hidden;" vector-effect="non-scaling-stroke" x="-540" y="-540" rx="0" ry="0" width="1080" height="1080" />
+  </g>
+  <g transform="matrix(1 0 0 1 540 540)" id="7904e43b-0702-4d32-8613-9089e3289ee6"> </g>
+  <g transform="matrix(4.15 0 0 4.15 493.33 568)">
+    <path style="stroke: rgb(54,24,108); stroke-width: 1.5; stroke-dasharray: none; stroke-linecap: round; stroke-dashoffset: 0; stroke-linejoin: round; stroke-miterlimit: 4; fill: none; fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke" transform="translate(-0.75, -18.75)" d="M 0.75 14.254 L 0.75 23.254" stroke-linecap="round" />
+  </g>
+  <g transform="matrix(4.15 0 0 4.15 524.44 568)">
+    <path style="stroke: rgb(54,24,108); stroke-width: 1.5; stroke-dasharray: none; stroke-linecap: round; stroke-dashoffset: 0; stroke-linejoin: round; stroke-miterlimit: 4; fill: none; fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke" transform="translate(-8.25, -18.75)" d="M 0.75 15.754 L 6 15.754 C 6.79565 15.754 7.55871 16.0701 8.12132 16.6327 C 8.68393 17.1953 9 17.9584 9 18.754 L 12.75 18.754 C 13.5456 18.754 14.3087 19.0701 14.8713 19.6327 C 15.4339 20.1953 15.75 20.9584 15.75 21.754 L 0.75 21.754" stroke-linecap="round" />
+  </g>
+  <g transform="matrix(4.15 0 0 4.15 521.33 568)">
+    <path style="stroke: rgb(54,24,108); stroke-width: 1.5; stroke-dasharray: none; stroke-linecap: round; stroke-dashoffset: 0; stroke-linejoin: round; stroke-miterlimit: 4; fill: none; fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke" transform="translate(-7.5, -18.75)" d="M 6 18.754 L 9 18.754" stroke-linecap="round" />
+  </g>
+  <g transform="matrix(4.15 0 0 4.15 543.11 536.89)">
+    <path style="stroke: rgb(54,24,108); stroke-width: 1.5; stroke-dasharray: none; stroke-linecap: round; stroke-dashoffset: 0; stroke-linejoin: round; stroke-miterlimit: 4; fill: none; fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke" transform="translate(-12.75, -11.25)" d="M 2.25 11.254 L 23.25 11.254" stroke-linecap="round" />
+  </g>
+  <g transform="matrix(4.15 0 0 4.15 543.11 496.44)">
+    <path style="stroke: rgb(54,24,108); stroke-width: 1.5; stroke-dasharray: none; stroke-linecap: round; stroke-dashoffset: 0; stroke-linejoin: round; stroke-miterlimit: 4; fill: none; fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke" transform="translate(-12.75, -1.5)" d="M 12.75 0.754028 L 12.75 2.25403" stroke-linecap="round" />
+  </g>
+  <g transform="matrix(4.15 0 0 4.15 543.11 518.22)">
+    <path style="stroke: rgb(54,24,108); stroke-width: 1.5; stroke-dasharray: none; stroke-linecap: round; stroke-dashoffset: 0; stroke-linejoin: round; stroke-miterlimit: 4; fill: none; fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke" transform="translate(-12.75, -6.75)" d="M 21.75 11.254 C 21.75 8.86708 20.8018 6.57789 19.114 4.89007 C 17.4261 3.20224 15.1369 2.25403 12.75 2.25403 C 10.3631 2.25403 8.07387 3.20224 6.38604 4.89007 C 4.69821 6.57789 3.75 8.86708 3.75 11.254" stroke-linecap="round" />
+  </g>
+  <g transform="matrix(4.15 0 0 4.15 558.59 543.27)">
+    <path style="stroke: rgb(54,24,108); stroke-width: 1.5; stroke-dasharray: none; stroke-linecap: round; stroke-dashoffset: 0; stroke-linejoin: round; stroke-miterlimit: 4; fill: none; fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke" transform="translate(-16.48, -12.79)" d="M 11.25 14.254 L 18.4 14.254 C 18.956 14.2536 19.5009 14.0988 19.9739 13.8067 C 20.447 13.5147 20.8296 13.0969 21.079 12.6 L 21.7115 11.3314" stroke-linecap="round" />
+  </g>
+</svg>
