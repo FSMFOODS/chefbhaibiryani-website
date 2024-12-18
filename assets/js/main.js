@@ -43,6 +43,10 @@ function scrollActive(){
 }
 window.addEventListener('scroll', scrollActive)
 
+/*==================== CONTACT BUTTON ====================*/
+const contact_btn = document.getElementsByClassName('contact__button')[0];
+const contact_no = document.getElementById("contact__no").innerText;
+contact_btn.addEventListener('click', () => navigator.clipboard.writeText(contact_no));
 /*==================== CHANGE BACKGROUND HEADER ====================*/ 
 function scrollHeader(){
     const nav = document.getElementById('header')
