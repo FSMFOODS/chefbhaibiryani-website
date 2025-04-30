@@ -345,6 +345,8 @@ img{
 .menu__content {
   display: flex;
   flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
   background-color: var(--container-color);
   border-radius: .5rem;
   box-shadow: 0 2px 4px rgba(3,74,40,.15);
@@ -393,7 +395,8 @@ img{
 }
 
 .menu__button{
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -596,4 +599,53 @@ img{
 @keyframes marquee {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
+}
+
+.swiggy__btn {
+  /* width: 50%; */
+  background-color: #fc8019;
+  /* padding: .7rem; */
+  /* padding-bottom: .3rem; */
+}
+
+.swiggy__btn:hover {
+  background-color: #ef710a;
+  color: #fff;
+  border-radius: .5rem;
+}
+
+
+.zomato__btn {
+  /* width: 50%; */
+  background-color: #E23744;
+  /* background-color: #fc8019; */
+  /* padding: .7rem; */
+  /* padding-bottom: .3rem; */
+}
+
+.zomato__btn:hover {
+  background-color: #ea0518;
+  color: #fff;
+  border-radius: .5rem;
+}
+
+
+
+
+.order__btn__container {
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .2rem;
+}
+
+.delivery__btn__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .2rem;
 }
