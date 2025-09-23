@@ -59,7 +59,7 @@ items.forEach(item => {
         <h3 class="menu__name">${item.name}</h3>
         <span class="menu__detail">${item.detail}</span>
         <div class="order__btn__container">
-            <a href="https://order.chefbhaibiryani.com/home/" target="_blank" class="button menu__button">
+            <a href="https://chefbhaibiryani.petpooja.com/" target="_blank" class="button menu__button">
                 <i class='bx bx-cart-alt'></i>
                 <span>Order now</span>
             </a>
