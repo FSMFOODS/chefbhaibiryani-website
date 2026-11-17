@@ -4,297 +4,386 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!--========== ICONS ==========-->
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        <title>Chef Bhai Biriyani | Authentic Biryani in Avadi, Chennai</title>
+        <meta name="description" content="Authentic dum biryani in Avadi, Chennai. Order chicken, mutton, egg and bucket biryani, sides, starters and desserts from Chef Bhai Biriyani.">
+        <meta name="theme-color" content="#05401D">
+        <link rel="canonical" href="https://chefbhaibiryani.com/">
 
-        <!--========== CSS ==========-->
-        <link rel="stylesheet" href="assets/css/styles.css">
+        <meta property="og:title" content="Chef Bhai Biriyani | Authentic Biryani in Avadi">
+        <meta property="og:description" content="Slow-cooked dum biryani, handpicked spices, and the warmth of a home kitchen. Order on WhatsApp or through Swiggy and Zomato.">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://chefbhaibiryani.com/">
+        <meta property="og:image" content="https://chefbhaibiryani.com/assets/img/hero.png">
+        <meta property="og:site_name" content="Chef Bhai Biriyani">
+        <meta name="twitter:card" content="summary_large_image">
 
         <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg">
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,500..600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-        <title>Chef Bhai Biriyani</title>
+        <link rel="preload" as="image" href="assets/img/hero.png" fetchpriority="high">
+        <script>document.documentElement.classList.add('js');</script>
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Restaurant",
+                "name": "Chef Bhai Biriyani",
+                "url": "https://chefbhaibiryani.com/",
+                "image": "https://chefbhaibiryani.com/assets/img/hero.png",
+                "telephone": "+918000786767",
+                "servesCuisine": ["Indian", "Biryani", "Hyderabadi", "Mughlai"],
+                "hasMenu": "https://chefbhaibiryani.com/#menu",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "No. 1/1, Muthukumaran Street, Kamaraj Nagar",
+                    "addressLocality": "Avadi",
+                    "addressRegion": "Tamil Nadu",
+                    "postalCode": "600071",
+                    "addressCountry": "IN"
+                },
+                "openingHoursSpecification": [
+                    {
+                        "@type": "OpeningHoursSpecification",
+                        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                        "opens": "11:00",
+                        "closes": "23:00"
+                    }
+                ]
+            }
+        </script>
     </head>
     <body>
+        <a class="skip-link" href="#main">Skip to content</a>
 
-        <!--========== SCROLL TOP ==========-->
-        <a href="#" class="scrolltop" id="scroll-top">
-            <i class='bx bx-chevron-up scrolltop__icon'></i>
+        <a href="#home" class="scrolltop" id="scroll-top" aria-label="Back to top">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m18 15-6-6-6 6"/>
+            </svg>
         </a>
 
-        <!--========== HEADER ==========-->
-        <header class="l-header" id="header">
-            <nav class="nav bd-container">
-                <a href="#" class="nav__logo">Chef Bhai Biriyani</a>
+        <header class="site-header" id="header">
+            <nav class="nav container" aria-label="Primary">
+                <a href="#home" class="brand">
+                    <img src="assets/img/logo.svg" width="40" height="40" alt="" class="brand__mark">
+                    <span class="brand__name">Chef Bhai <span>Biriyani</span></span>
+                </a>
 
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
-                        <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
-                        <li class="nav__item"><a href="#menu" class="nav__link">Menu</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Contact us</a></li>
+                        <li><a href="#home" class="nav__link active-link">Home</a></li>
+                        <li><a href="#services" class="nav__link">Services</a></li>
+                        <li><a href="#menu" class="nav__link">Menu</a></li>
+                        <li><a href="#about" class="nav__link">About</a></li>
+                        <li><a href="#contact" class="nav__link">Contact</a></li>
                     </ul>
+                    <a href="https://wa.me/919677149451" target="_blank" rel="noopener" class="button button--primary nav__cta">
+                        Order on WhatsApp
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M5 12h14M13 6l6 6-6 6"/>
+                        </svg>
+                    </a>
                 </div>
 
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
-                </div>
+                <button class="nav__toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+                    <span class="nav__toggle-lines" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </button>
             </nav>
         </header>
 
-        <main class="l-main">
-            <!--========== HOME ==========-->
-            <section class="home" id="home">
-                <div class="home__container bd-container bd-grid">
-                    <div class="home__data">
-                        <h1 class="home__title">Chef Bhai Biriyani</h1>
-                        <h2 class="home__subtitle">Where every bite <br> tells a story.</h2>
-                        <a href="https://chefbhaibiryani.petpooja.com/"  target="_blank" class="button">Order now</a>
-                    </div>
-    
-                    <img src="assets/img/hero.png" alt="" class="home__img">
-                </div>
-            </section>
+        <main id="main">
+            <section class="hero" id="home" aria-labelledby="home-title">
+                <div class="hero__grid container">
+                    <div class="hero__content">
+                        <p class="eyebrow hero__eyebrow">Avadi, Chennai · Biryani house</p>
+                        <h1 class="hero__title" id="home-title">Chef Bhai <em>Biriyani</em></h1>
+                        <p class="hero__lead">Where every bite tells a story. Slow-cooked dum biryani, handpicked spices, and the warmth of a home kitchen — served hot in Avadi.</p>
 
-            <section class="section bd-container">
-                <span class="section-subtitle">Promise</span>
-                <h2 class="section-title">Our amazing quality</h2>
+                        <div class="hero__actions">
+                            <a href="https://wa.me/919677149451" target="_blank" rel="noopener" class="button button--primary">
+                                Order on WhatsApp
+                                <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M5 12h14M13 6l6 6-6 6"/>
+                                </svg>
+                            </a>
+                            <a href="#menu" class="button button--ghost">Explore the menu</a>
+                        </div>
 
-                <div class="marquee">
-                    <div class="track">
-                        <img src="./assets/img/gallery/quality.png" class="marq__img">
-                        <img src="./assets/img/gallery/halal.png" class="marq__img">
-                        <img src="./assets/img/gallery/fresh_meat.png" class="marq__img">
-                        <img src="./assets/img/gallery/no_msg.png" class="marq__img">
-                        <img src="./assets/img/gallery/natural_ing.png" class="marq__img">
-                    </div>
-                </div>
-                 
-            </section>
-
-            <!--========== SERVICES ==========-->
-            <section class="services section bd-container" id="services">
-                <span class="section-subtitle">Offering</span>
-                <h2 class="section-title">Our amazing services</h2>
-
-                <div class="services__container  bd-grid">
-                    <div class="services__content">
-                        <svg class="services__img" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M45.3205 21.5702L44.6357 19.3163C43.7659 16.756 40.9852 15.3857 38.4249 
-                            16.2556C36.9847 16.7449 35.8536 17.876 35.3643 19.3163L34.6795 21.5702C34.1032 
-                            23.471 33.9823 25.4807 34.3264 27.4368C34.6403 29.0838 35.6859 30.4987 37.168 
-                            31.2822L36.4011 48.4267C36.2984 49.3836 36.6088 50.339 37.2544 51.0528C38.6428 
-                            52.5715 40.9996 52.6771 42.5183 51.2887C42.6004 51.2136 42.6791 51.135 42.7541 
-                            51.0528C43.3853 50.3592 43.6952 49.4319 43.6075 48.4982L42.8363 31.28C44.3164 
-                            30.4962 45.3603 29.0822 45.6736 27.4368C46.0177 25.4807 45.8968 23.471 45.3205 
-                            21.5702ZM43.5723 27.0656C43.3413 28.2488 42.4981 29.2196 41.3589 29.6139C40.9265 
-                            29.7764 40.648 30.1988 40.6688 30.6603L41.4795 48.6667C41.5168 49.0199 41.4003 
-                            49.372 41.1595 49.6331C40.5172 50.269 39.4828 50.269 38.8405 49.6331C38.5877 
-                            49.351 38.4729 48.9712 38.5269 48.5963L39.3312 30.6603C39.352 30.1988 39.0735 
-                            29.7764 38.6411 29.6139C37.5019 29.2196 36.6587 28.2488 36.4277 27.0656C36.1424 
-                            25.4416 36.2429 23.7732 36.7211 22.1952L37.4059 19.9403C37.9357 18.5076 39.5267 
-                            17.7758 40.9595 18.3056C41.7169 18.5858 42.314 19.183 42.5941 19.9403L43.2789 
-                            22.1952C43.7565 23.7734 43.8571 25.4416 43.5723 27.0656Z"/>
-                            <path d="M28.8 16C28.2109 16 27.7333 16.4776 27.7333 17.0667V26.2251L24.8459 
-                            29.1125C24.6323 29.3253 24.5187 29.6188 24.5333 29.92L25.4667 48.5867C25.4889 
-                            48.9892 25.3428 49.3829 25.0635 49.6736C24.4796 50.2627 23.5287 50.2669 22.9395 
-                            49.6829C22.9363 49.6799 22.9332 49.6767 22.9301 49.6736C22.6507 49.3829 22.5047 
-                            48.9892 22.5269 48.5867L23.4667 29.92C23.4816 29.6189 23.3684 29.3256 23.1552 
-                            29.1125L20.2667 26.2251V17.0667C20.2667 16.4776 19.7891 16 19.2 16C18.6109 
-                            16 18.1333 16.4776 18.1333 17.0667V26.6667C18.1333 26.9496 18.2459 27.2208 
-                            18.4459 27.4208L21.3109 30.2869L20.4011 48.4832C20.3043 50.4708 21.8371 
-                            52.1607 23.8247 52.2575C25.8123 52.3543 27.5021 50.8215 27.5989 48.8339C27.6047 
-                            48.7171 27.6047 48.6001 27.5989 48.4833L26.6891 30.2871L29.5541 27.4209C29.7541 
-                            27.2209 29.8667 26.9497 29.8667 26.6668V17.0668C29.8667 16.4776 29.3891 16 28.8 16Z"/>
-                            <path d="M22.4 16C21.8109 16 21.3333 16.4776 21.3333 17.0667V25.6C21.3333 26.1891 
-                            21.8109 26.6667 22.4 26.6667C22.9891 26.6667 23.4667 26.1891 23.4667 25.6V17.0667C23.4667 
-                            16.4776 22.9891 16 22.4 16Z"/>
-                            <path d="M25.6 16C25.0109 16 24.5333 16.4776 24.5333 17.0667V25.6C24.5333 26.1891 
-                            25.0109 26.6667 25.6 26.6667C26.1891 26.6667 26.6667 26.1891 26.6667 25.6V17.0667C26.6667 
-                            16.4776 26.1891 16 25.6 16Z"/>
-                            <path d="M32 0C14.3269 0 0 14.3269 0 32C0 49.6731 14.3269 64 32 64C49.6731 64 64 49.6731 
-                            64 32C63.98 14.3352 49.6648 0.02 32 0ZM32 61.8667C15.5051 61.8667 2.13333 48.4949 
-                            2.13333 32C2.13333 15.5051 15.5051 2.13333 32 2.13333C48.4949 2.13333 61.8667 
-                            15.5051 61.8667 32C61.8479 48.4871 48.4871 61.8479 32 61.8667Z"/>
-                            <path d="M35.4625 52.0229C35.4053 51.4367 34.8836 51.0077 34.2972 51.0649C34.2835 
-                            51.0663 34.2697 51.0679 34.256 51.0697L34.2603 51.0687C32.7585 51.2431 31.2415 
-                            51.2431 29.7397 51.0687C29.1544 51 28.6244 51.4188 28.5557 52.0041C28.4871 
-                            52.5895 28.9059 53.1195 29.4912 53.1881C31.1567 53.3827 32.8391 53.3827 
-                            34.5045 53.1881C35.0908 53.1311 35.5197 52.6093 35.4625 52.0229Z"/>
-                            <path d="M48.32 18.2549C47.9414 17.8035 47.2686 17.7445 46.8173 18.1231C46.8158 
-                            18.1243 46.8144 18.1257 46.8128 18.1269C46.3625 18.5066 46.3052 19.1794 46.6848 
-                            19.6298C53.1161 27.2645 52.6241 38.5537 45.553 45.5999C45.1357 46.0158 45.1345 
-                            46.6914 45.5504 47.1087C45.9662 47.5261 46.6418 47.5273 47.0592 47.1114C54.9174 
-                            39.283 55.4654 26.7387 48.32 18.2549Z"/>
-                            <path d="M24.851 14.0992C24.8505 14.0992 24.85 14.0991 24.8495 14.0991C24.8487 
-                            14.0991 24.8478 14.0992 24.8469 14.0992H24.851Z"/>
-                            <path d="M37.0315 11.263C32.8628 10.2639 28.4908 10.5324 24.4757 12.0342C23.9243 
-                            12.2415 23.6455 12.8567 23.8528 13.408C24.0091 13.8236 24.4064 14.0987 24.8503 
-                            14.0991C24.9779 14.0984 25.1043 14.0751 25.2235 14.0299C28.8392 12.6778 32.7763 
-                            12.4363 36.5301 13.3366C37.1028 13.475 37.6792 13.1231 37.8176 12.5504C37.956 
-                            11.9778 37.6041 11.4014 37.0315 11.263Z"/>
-                            <path d="M18.3989 45.5466C14.8031 41.9569 12.7877 37.081 12.8 32C12.7895 
-                            27.9405 14.0753 23.9837 16.4704 20.7061C16.8244 20.2352 16.7296 19.5665 
-                            16.2587 19.2125C15.7877 18.8585 15.1191 18.9533 14.7651 19.4243C14.7588 
-                            19.4327 14.7527 19.441 14.7467 19.4496C8.5796 27.928 9.48706 39.6308 
-                            16.8875 47.057C17.3045 47.4744 17.9811 47.4746 18.3984 47.0576C18.8157 
-                            46.6405 18.816 45.964 18.3989 45.5466Z"/>
-                        </svg>
-                        <h3 class="services__title">Authentic Biryani, Perfected</h3>
-                        <p class="services__description">Indulge in the finest, aromatic biryanis crafted from the freshest ingredients. Every bite delivers a rich, authentic flavor that transports you straight to the heart of tradition.</p>
+                        <ul class="hero__proof" aria-label="What we promise">
+                            <li class="chip">
+                                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg>
+                                Halal
+                            </li>
+                            <li class="chip">
+                                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg>
+                                No MSG
+                            </li>
+                            <li class="chip">
+                                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg>
+                                Fresh meat
+                            </li>
+                        </ul>
                     </div>
 
-                    <div class="services__content">
-                        <!-- <span style="margin-bottom: 1rem;"> -->
-                            <svg class="services__img" width="70px" height="70px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path fill="#05401D" d="M480 257.152V192h-96a32 32 0 0 1 0-64h256a32 32 0 1 1 0 64h-96v65.152A448 448 0 0 1 955.52 768H68.48A448 448 0 0 1 480 257.152zM128 704h768a384 384 0 1 0-768 0zM96 832h832a32 32 0 1 1 0 64H96a32 32 0 1 1 0-64z"/></svg>
-                        <!-- </span> -->
-                        <h3 class="services__title">Hassle-Free Catering Service</h3>
-                        <p class="services__description">Whether you're hosting a small gathering or planning a large event, our catering service offers delicious meals delivered right to your door. Perfect for a hassle-free, satisfying biryani experience!</p>
-                    </div>
-
-                    <div class="services__content">
-                        <svg class="services__img" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0)">
-                            <path d="M19.1978 49.6016C17.4308 49.6016 15.9981 51.0342 15.9981 52.8012C15.9981 54.5682 17.4308 
-                            56.0008 19.1978 56.0008C20.9648 56.0008 22.3974 54.5682 22.3974 52.8012C22.3974 51.0342 20.9648 
-                            49.6016 19.1978 49.6016ZM19.1978 53.8677C18.6088 53.8677 18.1312 53.3902 18.1312 52.8012C18.1312 
-                            52.2122 18.6088 51.7347 19.1978 51.7347C19.7868 51.7347 20.2643 52.2122 20.2643 52.8012C20.2643 
-                            53.3902 19.7868 53.8677 19.1978 53.8677Z"/>
-                            <path d="M50.1275 49.6016C48.3605 49.6016 46.9279 51.0342 46.9279 52.8012C46.9279 54.5682 48.3605 
-                            56.0008 50.1275 56.0008C51.8945 56.0008 53.3271 54.5682 53.3271 52.8012C53.3271 51.0342 51.8945 
-                            49.6016 50.1275 49.6016ZM50.1275 53.8677C49.5385 53.8677 49.0609 53.3902 49.0609 52.8012C49.0609 
-                            52.2122 49.5385 51.7347 50.1275 51.7347C50.7165 51.7347 51.194 52.2122 51.194 52.8012C51.194 
-                            53.3902 50.7165 53.8677 50.1275 53.8677Z"/>
-                            <path d="M3.19962 21.8715H5.3327V24.0045H3.19962V21.8715Z"/>
-                            <path d="M0 26.1377H2.13308V28.2708H0V26.1377Z"/>
-                            <path d="M52.2606 11.2061H58.6598V13.3391H52.2606V11.2061Z"/>
-                            <path d="M47.9944 11.2061H50.1275V13.3391H47.9944V11.2061Z"/>
-                            <path d="M34.1294 4.80676H44.7948V6.93985H34.1294V4.80676Z"/>
-                            <path d="M29.8632 4.80676H31.9963V6.93985H29.8632V4.80676Z"/>
-                            <path d="M63.9925 59.2005V57.0674H54.8842C55.7935 56.0607 56.3575 54.7906 56.495 53.4412L63.4593 
-                            49.461C63.5087 49.4266 63.5556 49.3886 63.5988 49.3469C63.6363 49.3214 63.6723 49.2928 63.7056 
-                            49.2626C63.7858 49.1777 63.8514 49.0798 63.8998 48.9735C63.905 48.9636 63.9123 48.9574 63.917 
-                            48.948C63.9655 48.8272 63.9915 48.6986 63.9936 48.5684C63.9936 48.5564 63.9998 48.547 63.9998 
-                            48.535V38.9362C63.9951 38.9049 63.9889 38.8742 63.9806 38.8435C63.9821 38.8159 63.9821 38.7877 
-                            63.9806 38.7601L61.8475 25.9616C61.8428 25.946 61.8371 25.9299 61.8308 25.9148C61.8308 25.9033 
-                            61.8308 25.8903 61.8308 25.8788L60.7643 21.6127C60.645 21.1367 60.2169 20.8034 59.7264 20.8049H46.7893C46.6446 
-                            20.2852 46.3696 19.8103 45.9905 19.4259L38.708 12.1435C38.1096 11.5414 37.2951 11.204 36.4457 
-                            11.2061H10.6654C10.0764 11.2061 9.59888 11.6836 9.59888 12.2726V16.5388H0V18.6719H9.59888V21.8715H7.4658V24.0046H9.59888V26.1377H4.26617V28.2707H9.59888V37.8696C9.00989 
-                            37.8696 8.53234 38.3472 8.53234 38.9362V48.535C8.53234 48.5574 8.54432 48.5767 8.54536 48.6001C8.55161 
-                            48.6965 8.57088 48.7918 8.60264 48.8829C8.61254 48.9168 8.62451 48.9501 8.63805 48.9829C8.68805 49.0949 
-                            8.75679 49.1969 8.84168 49.285L12.8178 53.2611C12.9198 54.6749 13.4911 56.0149 14.441 57.0674H0V59.2005H63.9925ZM44.1016 50.6681H25.2236C25.0929 
-                            50.2984 24.9278 49.9411 24.731 49.6016H44.5943C44.3974 49.9411 44.2323 50.2984 44.1016 50.6681ZM25.597 
-                            52.8012H43.7282C43.7288 54.3776 44.3141 55.8977 45.3708 57.0674H23.9545C25.0111 55.8977 25.5965 54.3776 
-                            25.597 52.8012ZM45.8613 52.8012C45.8613 50.4452 47.7715 48.535 50.1275 48.535C52.4835 48.535 54.3937 
-                            50.4452 54.3937 52.8012C54.3937 55.1572 52.4835 57.0674 50.1275 57.0674C47.7715 57.0674 45.8613 55.1572 45.8613 
-                            52.8012ZM56.2898 51.0946C56.145 50.5723 55.9336 50.0703 55.6607 49.6016H58.9093L56.2898 51.0946ZM61.6662 
-                            37.8696H51.194V27.2042H59.8894L61.6662 37.8696ZM59.4269 25.0711H50.1275C49.5385 25.0711 49.0609 25.5487 
-                            49.0609 26.1377V38.9362C49.0609 39.5252 49.5385 40.0027 50.1275 40.0027H61.8595V42.1358H58.6598V44.2689H61.8595V47.4685H53.6578C51.519 
-                            46.0463 48.736 46.0463 46.5972 47.4685H22.7281C20.5893 46.0463 17.8063 46.0463 15.6674 
-                            47.4685H10.6654V43.2023H14.9316V41.0692H10.6654V40.0027H45.8613C46.4503 40.0027 46.9279 
-                            39.5252 46.9279 38.9362V22.938H58.8937L59.4269 25.0711ZM11.732 28.2707H20.2643V26.1377H11.732V24.0046H21.3308V21.8715H11.732V18.6719H17.0647V16.5388H11.732V13.3391H36.4457C36.7285 
-                            13.3402 36.9993 13.4527 37.1998 13.6516L44.4823 20.9341C44.6828 21.1341 44.7948 21.4059 44.7948 21.6892V37.8696H11.732V28.2707ZM13.6646 
-                            49.6016C13.4766 49.9255 13.3177 50.2661 13.1901 50.6181L12.1736 49.6016H13.6646ZM14.9316 
-                            52.8012C14.9316 50.4452 16.8418 48.535 19.1978 48.535C21.5537 48.535 23.4639 50.4452 23.4639 
-                            52.8012C23.4639 55.1572 21.5537 57.0674 19.1978 57.0674C16.8418 57.0674 14.9316 55.1572 14.9316 52.8012Z"/>
-                                </g>
-                                <defs>
-                                <clipPath id="clip0">
-                                <rect width="64" height="64" fill="white"/>
-                                </clipPath>
-                                </defs>
-                        </svg>
-                        <h3 class="services__title">Quick Take Away</h3>
-                        <p class="services__description">Craving biryani at home? We deliver the same irresistible taste, hot and fresh, right to your doorstep. Enjoy your favorite dish without ever leaving your couch!</p>
+                    <div class="hero__visual">
+                        <img src="assets/img/hero.png" width="443" height="440" alt="Chef Bhai Biriyani signature biryani plate" class="hero__img" fetchpriority="high" decoding="async">
+                        <div class="hero__note" aria-hidden="true">
+                            <span class="hero__note-label">Dum-cooked</span>
+                            <span class="hero__note-text">Layered with care</span>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <!--========== MENU ==========-->
-            <section class="menu section bd-container" id="menu">
-                <span class="section-subtitle">Special</span>
-                <h2 class="section-title">Our Exclusive Menu</h2>
+            <section class="section promise" aria-labelledby="promise-title">
+                <div class="container">
+                    <div class="section-heading section-heading--center reveal">
+                        <p class="eyebrow">Our promise</p>
+                        <h2 class="section-title" id="promise-title">Quality you can taste</h2>
+                        <p class="section-lead">Good biryani starts with good ingredients. Here is what goes into every plate we send out.</p>
+                    </div>
 
-                <div class="menu__container bd-grid" id="menuContainer">
+                    <div class="marquee reveal" id="quality-marquee" style="--reveal-delay: 120ms">
+                        <div class="marquee__viewport">
+                            <div class="marquee__track">
+                                <div class="marquee__group">
+                                    <img src="assets/img/gallery/quality.png" width="400" height="400" alt="Premium quality promise" class="marquee__img" loading="lazy" decoding="async">
+                                    <img src="assets/img/gallery/halal.png" width="400" height="400" alt="Halal promise" class="marquee__img" loading="lazy" decoding="async">
+                                    <img src="assets/img/gallery/fresh_meat.png" width="400" height="400" alt="Fresh meat promise" class="marquee__img" loading="lazy" decoding="async">
+                                    <img src="assets/img/gallery/no_msg.png" width="400" height="400" alt="No MSG promise" class="marquee__img" loading="lazy" decoding="async">
+                                    <img src="assets/img/gallery/natural_ing.png" width="400" height="400" alt="Natural ingredients promise" class="marquee__img" loading="lazy" decoding="async">
+                                </div>
+                                <div class="marquee__group" aria-hidden="true">
+                                    <img src="assets/img/gallery/quality.png" width="400" height="400" alt="" class="marquee__img" loading="lazy" decoding="async">
+                                    <img src="assets/img/gallery/halal.png" width="400" height="400" alt="" class="marquee__img" loading="lazy" decoding="async">
+                                    <img src="assets/img/gallery/fresh_meat.png" width="400" height="400" alt="" class="marquee__img" loading="lazy" decoding="async">
+                                    <img src="assets/img/gallery/no_msg.png" width="400" height="400" alt="" class="marquee__img" loading="lazy" decoding="async">
+                                    <img src="assets/img/gallery/natural_ing.png" width="400" height="400" alt="" class="marquee__img" loading="lazy" decoding="async">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="marquee__toggle" id="marquee-toggle" type="button" aria-pressed="false" aria-label="Pause quality marquee animation">
+                            <span class="marquee__toggle-label">Pause</span>
+                        </button>
+                    </div>
                 </div>
             </section>
 
-            <!--========== ABOUT ==========-->
-            <section class="about section bd-container" id="about">
-                <!-- <div class="about__container  bd-grid"> -->
-                    <div class="about__data">
-                        <span class="section-subtitle about__initial">About us</span>
-                        <h2 class="section-title about__initial">We cook the best Briyani</h2>
-                        <p class="about__description">                            
-                            At Chef Bhai Biryani, we believe that great food tells a story-one filled with heritage, love, and bold flavors. Biryani isn't just a meal. It's a journey through rich spices, aromatic rice, and tender meats or vegetables, carefully crafted to bring people together. Chef Bhai Biryani was founded with a simple dream: to share the taste of authentic, homemade biryani with everyone who loves this timeless dish.
-                            Our recipes are inspired by tradition and perfected by our passionate chefs. From the vibrant Hyderabadi biryani to the delicate Lucknowi style, each of our biryanis is prepared with handpicked spices and high-quality ingredients. We slow-cook every serving to perfection, making sure that every bite bursts with flavor, just like it should.
-                            Chef Bhai Biryani is more than a restaurant; it's a place where memories are made, celebrations are shared, and taste is honored. Whether you're a lifelong biryani lover or trying it for the first time, we're here to bring you a meal that feels like home.
-                            Welcome to Chef Bhai Biryani-where every bite tells a story.
-                        </p>
-                        <!-- <a href="#" class="button">Explore history</a> -->
+            <section class="section services" id="services" aria-labelledby="services-title">
+                <div class="container">
+                    <div class="section-heading reveal">
+                        <p class="eyebrow">What we do</p>
+                        <h2 class="section-title" id="services-title">More than a biryani shop</h2>
+                        <p class="section-lead">Dine in, take away, or let us handle the food for your next gathering.</p>
                     </div>
 
-                    <!-- <img src="assets/img/about.jpg" alt="" class="about__img"> -->
-                <!-- </div> -->
+                    <div class="services__grid">
+                        <article class="service-card reveal">
+                            <span class="service-card__icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 10h16M5 10c0-3.5 3.1-6 7-6s7 2.5 7 6"/>
+                                    <path d="M4 10c0 5 3.6 8 8 8s8-3 8-8"/>
+                                    <path d="M3 20h18"/>
+                                </svg>
+                            </span>
+                            <h3>Authentic biryani, perfected</h3>
+                            <p>Fragrant rice, handpicked spices and slow dum cooking. Every batch is layered and finished the traditional way.</p>
+                        </article>
+
+                        <article class="service-card reveal" style="--reveal-delay: 100ms">
+                            <span class="service-card__icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M3 13h18M5 13a7 7 0 0 1 14 0"/>
+                                    <path d="M2 17h20M6 21h12"/>
+                                    <path d="M12 6V4"/>
+                                </svg>
+                            </span>
+                            <h3>Hassle-free catering</h3>
+                            <p>From small gatherings to full celebrations, we bring the biryani. Tell us the headcount and we will take care of the rest.</p>
+                        </article>
+
+                        <article class="service-card reveal" style="--reveal-delay: 200ms">
+                            <span class="service-card__icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M6 8h12l1 12H5L6 8Z"/>
+                                    <path d="M9 8V6a3 3 0 0 1 6 0v2"/>
+                                    <path d="M9 12v4M12 12v4M15 12v4"/>
+                                </svg>
+                            </span>
+                            <h3>Quick takeaway &amp; delivery</h3>
+                            <p>Craving biryani at home? Pick it up from Avadi, message us on WhatsApp, or order through the platform you already use.</p>
+                        </article>
+                    </div>
+                </div>
             </section>
 
-            <!--========== CONTACT US ==========-->
-            <section class="contact section bd-container" id="contact">
-                <div class="contact__container bd-grid">
-                    <div class="contact__data">
-                        <span class="section-subtitle contact__initial">Let's talk</span>
-                        <h2 class="section-title contact__initial">Contact us</h2>
-                        <p class="contact__description">If you want to order food in our restaurant, contact us and we will attend you quickly.</p>
+            <section class="section menu" id="menu" aria-labelledby="menu-title">
+                <div class="container">
+                    <div class="menu__header">
+                        <div class="section-heading reveal">
+                            <p class="eyebrow">The menu</p>
+                            <h2 class="section-title" id="menu-title">Our Exclusive Menu</h2>
+                            <p class="section-lead">Chicken, mutton, egg and 65 biryani, bucket feasts, starters and add-ons — with prices for every portion.</p>
+                        </div>
+
+                        <div class="menu__filters reveal" role="group" aria-label="Filter the menu by category" style="--reveal-delay: 100ms">
+                            <button type="button" class="filter-btn" data-filter="all" aria-pressed="true">All</button>
+                            <button type="button" class="filter-btn" data-filter="biryani" aria-pressed="false">Biryani</button>
+                            <button type="button" class="filter-btn" data-filter="bucket" aria-pressed="false">Bucket</button>
+                            <button type="button" class="filter-btn" data-filter="starters" aria-pressed="false">Starters</button>
+                            <button type="button" class="filter-btn" data-filter="addons" aria-pressed="false">Add-ons</button>
+                            <button type="button" class="filter-btn" data-filter="party" aria-pressed="false">Party &amp; Special</button>
+                        </div>
                     </div>
 
-                    <div class="contact__button">
-                        <p class="button menu__button">
-                            <i class='bx bx-phone-call'></i>
-                            <span id="contact__no">+91 80007 86767</span>
-                        </p>
+                    <p class="menu__count" id="menu-count" aria-live="polite">Showing the full menu</p>
+
+                    <div class="menu__grid" id="menuContainer"></div>
+
+                    <noscript>
+                        <div class="menu__fallback">
+                            <p>Our menu includes chicken, mutton, plain, egg and 65 biryani, bucket biryani, starters, add-ons, and party orders. Call <a href="tel:+918000786767">+91 80007 86767</a> or message us on WhatsApp at <a href="https://wa.me/919677149451" target="_blank" rel="noopener">+91 96771 49451</a> to order.</p>
+                            <a href="https://wa.me/919677149451" target="_blank" rel="noopener" class="button button--primary">Order on WhatsApp</a>
+                        </div>
+                    </noscript>
+
+                    <p class="menu__note">All prices in ₹. Prices may change, so confirm current pricing and availability on <a href="https://wa.me/919677149451" target="_blank" rel="noopener">WhatsApp</a>, <a href="https://www.swiggy.com/direct/brand/589856?source=swiggy-direct&subSource=generic" target="_blank" rel="noopener">Swiggy</a> or <a href="https://link.zomato.com/xqzv/rshare?id=9325551730563a99" target="_blank" rel="noopener">Zomato</a>. Bulk, party and corporate orders: <a href="tel:+918000786767">call +91 80007 86767</a>.</p>
+                </div>
+            </section>
+
+            <section class="section about" id="about" aria-labelledby="about-title">
+                <div class="about__grid container">
+                    <div class="about__content reveal">
+                        <p class="eyebrow">Our story</p>
+                        <h2 class="section-title" id="about-title">We cook the best biryani</h2>
+                        <p>At Chef Bhai Biriyani, great food tells a story — one filled with heritage, love and bold flavour. Biryani is not just a meal. It is a journey through rich spices, aromatic rice and tender meat, made to bring people together.</p>
+                        <p>Our recipes are inspired by tradition and perfected by cooks who care. From the vibrant Hyderabadi style to the delicate Lucknowi approach, every biryani is prepared with handpicked spices and slow-cooked in small batches.</p>
+                        <div class="about__values">
+                            <span class="chip">Handpicked spices</span>
+                            <span class="chip">Slow-cooked on dum</span>
+                            <span class="chip">Made for sharing</span>
+                        </div>
+                    </div>
+
+                    <aside class="about__quote reveal" style="--reveal-delay: 120ms" aria-label="Our approach to cooking">
+                        <span class="about__quote-mark" aria-hidden="true">“</span>
+                        <p>Dum. Spice. Patience. That is the whole recipe.</p>
+                        <span class="about__quote-caption">Chef Bhai Biriyani</span>
+                    </aside>
+                </div>
+            </section>
+
+            <section class="section contact" id="contact" aria-labelledby="contact-title">
+                <div class="container">
+                    <div class="contact__panel reveal">
+                        <div class="contact__content">
+                            <p class="eyebrow">Let's talk</p>
+                            <h2 class="section-title" id="contact-title">Hungry? We are one call away.</h2>
+                            <p class="contact__description">Call to order, ask about catering, or copy our number for later. We are open every day from 11 AM to 11 PM.</p>
+
+                            <div class="contact__actions">
+                                <a href="tel:+918000786767" class="button button--light">
+                                    <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M6.6 3h2.7l1.4 4.2-2 1.4a14 14 0 0 0 6.7 6.7l1.4-2L21 14.7v2.7a2.6 2.6 0 0 1-2.8 2.6A17.4 17.4 0 0 1 3.4 5.8 2.6 2.6 0 0 1 6.6 3Z"/>
+                                    </svg>
+                                    Call now
+                                </a>
+                                <button type="button" class="button button--ghost-light" id="copy-phone" data-phone="+91 80007 86767">
+                                    <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <rect x="8" y="8" width="12" height="12" rx="2"/>
+                                        <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/>
+                                    </svg>
+                                    Copy number
+                                </button>
+                            </div>
+
+                            <div class="contact__details">
+                                <p>
+                                    <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 0 1 16 0Z"/>
+                                        <circle cx="12" cy="10" r="2.5"/>
+                                    </svg>
+                                    <span>No. 1/1, Muthukumaran Street, Kamaraj Nagar, Avadi, Chennai 600071</span>
+                                    <a href="https://maps.app.goo.gl/8yVXaZzgePhauRUX6" target="_blank" rel="noopener">Directions</a>
+                                </p>
+                                <p>
+                                    <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <circle cx="12" cy="12" r="9"/>
+                                        <path d="M12 7v5l3 2"/>
+                                    </svg>
+                                    <span>Open daily, 11 AM – 11 PM</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="contact__aside">
+                            <p class="contact__aside-label">Call us</p>
+                            <a href="tel:+918000786767" class="contact__phone">+91 80007 86767</a>
+                            <p class="contact__aside-note">Dine-in · Takeaway · Delivery</p>
+                        </div>
                     </div>
                 </div>
             </section>
         </main>
 
-        <!--========== FOOTER ==========-->
-        <footer class="footer section bd-container">
-            <div class="footer__container bd-grid">
-                <div class="footer__content">
-                    <span>
-                        <img src="assets/img/logo.svg" class="footer__logo__img" alt="">
-                    </span>
-                    <br>
-                    <a href="#" class="footer__logo">Chef Bhai Biryani</a>
-                    <span class="footer__description">Restaurant</span>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__grid">
+                    <div class="footer__brand">
+                        <a href="#home" class="brand brand--footer">
+                            <img src="assets/img/logo.svg" width="40" height="40" alt="" class="brand__mark">
+                            <span class="brand__name">Chef Bhai <span>Biriyani</span></span>
+                        </a>
+                        <p>Authentic dum biryani, slow-cooked and served hot in Avadi, Chennai.</p>
+                    </div>
+
+                    <nav class="footer__col" aria-label="Footer">
+                        <h3>Explore</h3>
+                        <ul>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#menu">Menu</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="footer__col">
+                        <h3>Order</h3>
+                        <ul>
+                            <li><a href="https://wa.me/919677149451" target="_blank" rel="noopener">WhatsApp order</a></li>
+                            <li><a href="https://www.swiggy.com/direct/brand/589856?source=swiggy-direct&subSource=generic" target="_blank" rel="noopener">Swiggy</a></li>
+                            <li><a href="https://link.zomato.com/xqzv/rshare?id=9325551730563a99" target="_blank" rel="noopener">Zomato</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__col">
+                        <h3>Visit</h3>
+                        <address>
+                            No. 1/1, Muthukumaran Street<br>
+                            Kamaraj Nagar, Avadi<br>
+                            Chennai 600071<br>
+                            <a href="tel:+918000786767">+91 80007 86767</a><br>
+                            <span>11 AM – 11 PM, daily</span>
+                        </address>
+                    </div>
                 </div>
 
-                <div class="footer__content">
-                    <h3 class="footer__title">Timings</h3>
-                    <ul>
-                        <li><a href="#" class="footer__link">11 AM - 11 PM</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer__content">
-                    <h3 class="footer__title">Address</h3>
-                    <ul>
-                        <li><a href="https://maps.app.goo.gl/8yVXaZzgePhauRUX6" target="_blank">
-                            No. 1/1, Muthukumaran Street <br>
-                            Kamaraj Nagar <br>
-                            Avadi <br>
-                            Chennai - 600071
-                        </a></li>
-                    </ul>
+                <div class="footer__bottom">
+                    <p>© <span id="year">2026</span> Chef Bhai Biriyani. All rights reserved.</p>
+                    <a href="#home">Back to top <span aria-hidden="true">↑</span></a>
                 </div>
             </div>
         </footer>
 
-        <!--========== SCROLL REVEAL ==========-->
-        <script src="https://unpkg.com/scrollreveal"></script>
+        <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
 
-        <!--========== JS ==========-->
         <script src="assets/js/main.js"></script>
         <script src="assets/js/menu.js"></script>
     </body>
