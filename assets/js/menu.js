@@ -4,7 +4,7 @@ const menuGroups = [
         category: "biryani",
         description: "Slow-cooked chicken dum biryani with basmati rice, saffron and our house spice blend. Add Chicken 65 to make it a feast.",
         image: "chicken_bri.jpg",
-        imageAlt: "Chicken dum biryani served in a bowl",
+        imageAlt: "Chef Bhai chicken biryani menu board with mini, regular and 1 kg portions",
         items: [
             { name: "Mini", price: 140 },
             { name: "Regular", price: 180 },
@@ -18,7 +18,7 @@ const menuGroups = [
         category: "biryani",
         description: "Tender mutton layered with fragrant rice and cooked on dum. Available in mini, regular and one-kilo portions.",
         image: "mutton_bri.jpg",
-        imageAlt: "Mutton dum biryani with tender mutton pieces",
+        imageAlt: "Chef Bhai mutton biryani menu board with mini, regular and 1 kg portions",
         items: [
             { name: "Mini", price: 200 },
             { name: "Regular", price: 300 },
@@ -32,7 +32,7 @@ const menuGroups = [
         category: "biryani",
         description: "Everyday biryani favourites, cooked fresh in small batches. Simple, aromatic and ready to serve.",
         image: "egg_bri.jpg",
-        imageAlt: "Egg biryani topped with boiled eggs",
+        imageAlt: "Chef Bhai plain and egg biryani menu board",
         items: [
             { name: "Plain Biryani", price: 110, note: "500g" },
             { name: "Egg Biryani", price: 130, note: "500g · 2 eggs" },
@@ -45,7 +45,7 @@ const menuGroups = [
         category: "bucket",
         description: "A sharing bucket for gatherings, layered with rice, meat and aromatics. Choose chicken or mutton.",
         image: "bucket_biryani.jpg",
-        imageAlt: "Bucket biryani packed with rice and tender meat",
+        imageAlt: "Chef Bhai chicken bucket biryani menu board with large and mini sizes",
         note: "Accompaniments: egg, raita, brinjal, sweet & chicken 65.",
         items: [
             { name: "Mini · Chicken", price: 650, note: "Serves 3-4" },
@@ -59,7 +59,7 @@ const menuGroups = [
         category: "starters",
         description: "Crisp, hot and built for sharing. Order chicken 65 by weight, or pick a fry, lollipop or pepper special.",
         image: "chicken65.jpg",
-        imageAlt: "Crispy chicken 65 with curry leaves",
+        imageAlt: "Chef Bhai chicken 65 bone and boneless menu board",
         items: [
             { name: "Chicken 65 Bone", price: 50, note: "50g" },
             { name: "Chicken 65 Bone", price: 100, note: "100g" },
@@ -77,10 +77,9 @@ const menuGroups = [
         category: "addons",
         description: "The extras that complete the meal — cooling raita, brinjal salan, boiled egg and bread halwa.",
         images: [
-            { src: "bread_halwa.jpg", alt: "Bread halwa garnished with nuts" },
-            { src: "brinjal.jpg", alt: "Brinjal salan in a serving bowl" },
-            { src: "raitha.jpg", alt: "Fresh onion raitha in a bowl" },
-            { src: "boondi_raitha.jpg", alt: "Boondi raitha garnished with cumin" }
+            { src: "bread_halwa.jpg", alt: "Bread halwa garnished with cashews and raisins" },
+            { src: "brinjal.jpg", alt: "Brinjal gravy served in a bowl" },
+            { src: "raitha.jpg", alt: "Fresh onion raitha in a bowl" }
         ],
         items: [
             { name: "Bread Halwa", price: 100, note: "200g" },
@@ -129,7 +128,7 @@ const validFilters = new Set(Object.keys(categoryLabels));
 const partnerLinks = {
     swiggy: "https://www.swiggy.com/direct/brand/589856?source=swiggy-direct&subSource=generic",
     zomato: "https://link.zomato.com/xqzv/rshare?id=9325551730563a99",
-    whatsapp: "https://wa.me/919677149451"
+    whatsapp: "https://wa.me/918000786767"
 };
 
 let activeFilter = getInitialFilter();
@@ -177,7 +176,7 @@ function mediaTemplate(group) {
         const images = group.images
             .map(
                 (image) => `
-                    <img src="assets/img/menu/${image.src}" width="720" height="480" alt="${image.alt}" loading="lazy" decoding="async">
+                    <img src="assets/img/menu/${image.src}" width="720" height="540" alt="${image.alt}" loading="lazy" decoding="async">
                 `
             )
             .join("");
@@ -195,8 +194,8 @@ function mediaTemplate(group) {
     }
 
     return `
-        <div class="menu-group__media">
-            <img src="assets/img/menu/${group.image}" width="720" height="480" alt="${group.imageAlt}" loading="lazy" decoding="async">
+        <div class="menu-group__media menu-group__media--board">
+            <img src="assets/img/menu/${group.image}" width="720" height="540" alt="${group.imageAlt}" loading="lazy" decoding="async">
             <span class="menu-group__tag">${categoryDisplay[group.category]}</span>
         </div>
     `;
@@ -247,6 +246,22 @@ function actionsTemplate(group) {
     `;
 }
 
+function revealTemplate(group) {
+    if (group.image) {
+        return `<div class="menu-group__reveal" style="background-image: url('assets/img/menu/${group.image}')" aria-hidden="true"></div>`;
+    }
+
+    if (group.images) {
+        const images = group.images
+            .map((image) => `<img src="assets/img/menu/${image.src}" alt="" loading="lazy" decoding="async">`)
+            .join("");
+
+        return `<div class="menu-group__reveal menu-group__reveal--collage" aria-hidden="true">${images}</div>`;
+    }
+
+    return "";
+}
+
 function groupTemplate(group, index) {
     const classes = ["menu-group"];
 
@@ -258,6 +273,10 @@ function groupTemplate(group, index) {
         classes.push("menu-group--reverse");
     }
 
+    if (!group.featured && (group.image || group.images)) {
+        classes.push("menu-group--reveal");
+    }
+
     const note = group.note
         ? `<p class="menu-group__note">${group.note}</p>`
         : "";
@@ -265,6 +284,7 @@ function groupTemplate(group, index) {
     return `
         <article class="${classes.join(" ")}" style="--card-index: ${index}">
             ${mediaTemplate(group)}
+            ${revealTemplate(group)}
             <div class="menu-group__content">
                 <p class="menu-group__kicker">${categoryDisplay[group.category]}</p>
                 <h3>${group.title}</h3>
