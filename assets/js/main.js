@@ -8,6 +8,8 @@ const copyButton = document.getElementById("copy-phone");
 const toast = document.getElementById("toast");
 const marquee = document.getElementById("quality-marquee");
 const marqueeToggle = document.getElementById("marquee-toggle");
+const reviewsMarquee = document.getElementById("reviews-marquee");
+const reviewsToggle = document.getElementById("reviews-toggle");
 const year = document.getElementById("year");
 
 const desktopQuery = window.matchMedia("(min-width: 900px)");
@@ -220,6 +222,77 @@ if (marquee && marqueeToggle) {
 
     marqueeToggle.addEventListener("click", () => {
         setMarqueePaused(!marquee.classList.contains("is-paused"));
+    });
+}
+
+if (reviewsMarquee) {
+    const reviewsTrack = reviewsMarquee.querySelector(".reviews__track");
+    const reviewsGroup = reviewsTrack ? reviewsTrack.querySelector(".reviews__group") : null;
+
+    if (reviewsTrack && reviewsGroup) {
+        const reviewCards = Array.from(reviewsGroup.querySelectorAll(".reviews__card"));
+        const ratings = reviewCards
+            .map((card) => Number(card.dataset.rating))
+            .filter((rating) => Number.isFinite(rating) && rating > 0);
+        const score = document.querySelector(".reviews__score-number");
+        const count = document.querySelector(".reviews__summary-count");
+        const summaryStars = document.querySelector(".reviews__summary-stars");
+
+        if (ratings.length) {
+            const average = ratings.reduce((sum, rating) => sum + rating, 0) / ratings.length;
+            const averageLabel = average.toFixed(1);
+
+            if (score) {
+                score.textContent = averageLabel;
+            }
+
+            if (count) {
+                count.textContent = `Average from ${ratings.length} shared ${ratings.length === 1 ? "review" : "reviews"}`;
+            }
+
+            if (summaryStars) {
+                summaryStars.setAttribute("aria-label", `Average rating ${averageLabel} out of 5`);
+            }
+        }
+
+        const clone = reviewsGroup.cloneNode(true);
+        clone.setAttribute("aria-hidden", "true");
+        clone.querySelectorAll("[id]").forEach((element) => element.removeAttribute("id"));
+        reviewsTrack.appendChild(clone);
+
+        const setReviewDuration = () => {
+            const groupWidth = reviewsGroup.getBoundingClientRect().width;
+            if (!groupWidth) {
+                return;
+            }
+
+            const duration = Math.min(120, Math.max(40, groupWidth / 55));
+            reviewsMarquee.style.setProperty("--reviews-duration", `${duration.toFixed(1)}s`);
+        };
+
+        setReviewDuration();
+        reviewsMarquee.classList.add("is-ready");
+        window.addEventListener("resize", setReviewDuration, { passive: true });
+    }
+}
+
+if (reviewsMarquee && reviewsToggle) {
+    const setReviewsPaused = (paused) => {
+        reviewsMarquee.classList.toggle("is-paused", paused);
+        reviewsToggle.setAttribute("aria-pressed", String(paused));
+        reviewsToggle.setAttribute(
+            "aria-label",
+            paused ? "Play customer review marquee animation" : "Pause customer review marquee animation"
+        );
+
+        const label = reviewsToggle.querySelector(".reviews__toggle-label");
+        if (label) {
+            label.textContent = paused ? "Play reviews" : "Pause reviews";
+        }
+    };
+
+    reviewsToggle.addEventListener("click", () => {
+        setReviewsPaused(!reviewsMarquee.classList.contains("is-paused"));
     });
 }
 
