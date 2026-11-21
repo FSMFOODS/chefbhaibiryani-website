@@ -92,7 +92,7 @@ const menuGroups = [
         category: "party",
         description: "Planning a function, office lunch or family gathering? We cook in bulk and customize to your headcount.",
         featured: true,
-        cta: "call",
+        cta: "catering",
         note: "Party orders: per plate serves 6 persons (ratio 1:1.5). Accompaniments: egg, raita, brinjal & sweet. Bulk, party and corporate orders undertaken.",
         items: [
             { name: "Chicken Biryani Per Kg", price: 1400 },
@@ -126,6 +126,7 @@ const menuReduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 const validFilters = new Set(Object.keys(categoryLabels));
 
 const partnerLinks = {
+    order: "https://digital-menu.in/menu/chef-bhai",
     swiggy: "https://www.swiggy.com/direct/brand/589856?source=swiggy-direct&subSource=generic",
     zomato: "https://link.zomato.com/xqzv/rshare?id=9325551730563a99",
     whatsapp: "https://wa.me/918000786767"
@@ -201,7 +202,7 @@ function mediaTemplate(group) {
     `;
 }
 
-function whatsappOrderUrl(group) {
+function cateringWhatsAppUrl(group) {
     const lines = group.items.map((item) => {
         const price = typeof item.price === "number"
             ? `₹${item.price.toLocaleString("en-IN")}`
@@ -212,31 +213,32 @@ function whatsappOrderUrl(group) {
     });
 
     const message = [
-        `Hi Chef Bhai Biriyani, I'd like to order from the ${group.title} menu:`,
+        `Hi Chef Bhai Biriyani, I'd like to enquire about ${group.title}:`,
         "",
         ...lines,
         "",
-        "Please confirm availability and total."
+        "Please share availability and a quote."
     ].join("\n");
 
     return `${partnerLinks.whatsapp}?text=${encodeURIComponent(message)}`;
 }
 
 function actionsTemplate(group) {
-    if (group.cta === "call") {
+    if (group.cta === "catering") {
         return `
-            <a class="button button--light" href="tel:+918000786767" aria-label="Call Chef Bhai Biriyani to place a party or special order">
-                Call to order
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M6.6 3h2.7l1.4 4.2-2 1.4a14 14 0 0 0 6.7 6.7l1.4-2L21 14.7v2.7a2.6 2.6 0 0 1-2.8 2.6A17.4 17.4 0 0 1 3.4 5.8 2.6 2.6 0 0 1 6.6 3Z"/>
+            <a class="button button--primary" href="${cateringWhatsAppUrl(group)}" target="_blank" rel="noopener" aria-label="Send your party or catering enquiry to Chef Bhai Biriyani on WhatsApp">
+                WhatsApp catering
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M5 12h14M13 6l6 6-6 6"/>
                 </svg>
             </a>
+            <a class="menu-group__partner" href="tel:+918000786767" aria-label="Call Chef Bhai Biriyani about a party or catering order">Call</a>
         `;
     }
 
     return `
-        <a class="button button--primary" href="${whatsappOrderUrl(group)}" target="_blank" rel="noopener" aria-label="Order ${group.title} on WhatsApp with your menu selection prefilled">
-            WhatsApp
+        <a class="button button--primary" href="${partnerLinks.order}" target="_blank" rel="noopener" aria-label="Order ${group.title} from the Chef Bhai digital menu">
+            Order
             <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M5 12h14M13 6l6 6-6 6"/>
             </svg>

@@ -4,8 +4,6 @@ const navToggle = document.getElementById("nav-toggle");
 const navMenu = document.getElementById("nav-menu");
 const navLinks = Array.from(document.querySelectorAll(".nav__link[href^='#']"));
 const scrollTopLink = document.getElementById("scroll-top");
-const copyButton = document.getElementById("copy-phone");
-const toast = document.getElementById("toast");
 const marquee = document.getElementById("quality-marquee");
 const marqueeToggle = document.getElementById("marquee-toggle");
 const reviewsMarquee = document.getElementById("reviews-marquee");
@@ -14,8 +12,6 @@ const year = document.getElementById("year");
 
 const desktopQuery = window.matchMedia("(min-width: 900px)");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-
-let toastTimer = null;
 
 function setNavOpen(open) {
     if (!navToggle) {
@@ -147,62 +143,6 @@ if (revealItems.length) {
 
         revealItems.forEach((item) => revealObserver.observe(item));
     }
-}
-
-function showToast(message) {
-    if (!toast) {
-        return;
-    }
-
-    toast.textContent = message;
-    toast.classList.add("is-visible");
-    window.clearTimeout(toastTimer);
-    toastTimer = window.setTimeout(() => {
-        toast.classList.remove("is-visible");
-    }, 2800);
-}
-
-async function copyText(text) {
-    if (navigator.clipboard && window.isSecureContext) {
-        try {
-            await navigator.clipboard.writeText(text);
-            return true;
-        } catch {
-        }
-    }
-
-    const field = document.createElement("textarea");
-    field.value = text;
-    field.setAttribute("readonly", "");
-    field.style.position = "fixed";
-    field.style.top = "-9999px";
-    field.style.opacity = "0";
-    body.appendChild(field);
-    field.select();
-
-    let copied = false;
-
-    try {
-        copied = document.execCommand("copy");
-    } catch (error) {
-        copied = false;
-    }
-
-    field.remove();
-    return copied;
-}
-
-if (copyButton) {
-    copyButton.addEventListener("click", async () => {
-        const phone = copyButton.dataset.phone || "+91 80007 86767";
-        const copied = await copyText(phone);
-
-        showToast(
-            copied
-                ? "Phone number copied. See you soon."
-                : "Could not copy. Please call +91 80007 86767."
-        );
-    });
 }
 
 if (marquee && marqueeToggle) {
