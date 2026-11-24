@@ -1063,10 +1063,6 @@ html:not(.js) .menu__count {
     .menu-group--feature {
         grid-template-columns: 1fr;
     }
-
-    .menu-group--feature .menu-group__content {
-        max-width: 72ch;
-    }
 }
 
 @media (min-width: 900px) and (hover: hover) and (pointer: fine) {

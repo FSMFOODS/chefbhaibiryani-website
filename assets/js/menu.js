@@ -75,7 +75,7 @@ const menuGroups = [
     {
         title: "Add-ons",
         category: "addons",
-        description: "The extras that complete the meal — cooling raita, brinjal salan, boiled egg and bread halwa.",
+        description: "The extras that complete the meal: cooling raita, brinjal salan, boiled egg and bread halwa.",
         images: [
             { src: "bread_halwa.jpg", alt: "Bread halwa garnished with cashews and raisins" },
             { src: "brinjal.jpg", alt: "Brinjal gravy served in a bowl" },
@@ -209,7 +209,7 @@ function cateringWhatsAppUrl(group) {
             : item.priceLabel;
         const note = item.note ? ` (${item.note})` : "";
 
-        return `• ${item.name}${note} — ${price}`;
+        return `• ${item.name}${note} - ${price}`;
     });
 
     const message = [
